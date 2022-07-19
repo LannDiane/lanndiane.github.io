@@ -111,4 +111,29 @@
         <tag>哲学</tag>
       </tags>
   </entry>
+  <entry>
+    <title>mac报错: sh:vue-cli-service:command not found</title>
+    <url>/2022/07/19/mac%E6%8A%A5%E9%94%99-sh-vue-cli-service-command-not-found/</url>
+    <content><![CDATA[<h3 id="报错原因"><a href="#报错原因" class="headerlink" title="报错原因"></a>报错原因</h3><p><strong>sh: vue-cli-service: command not found</strong></p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">sh: vue-cli-service: command not found</span><br><span class="line">npm ERR! code ELIFECYCLE</span><br><span class="line">npm ERR! syscall spawn</span><br><span class="line">npm ERR! file sh</span><br><span class="line">npm ERR! errno ENOENT</span><br><span class="line">npm ERR! mall@0.1.0 serve: `vue-cli-service serve`</span><br><span class="line">npm ERR! spawn ENOENT</span><br><span class="line">npm ERR! </span><br><span class="line">npm ERR! Failed at the mall@0.1.0 serve script.</span><br><span class="line">npm ERR! This is probably not a problem with npm. There is likely additional logging output above.</span><br></pre></td></tr></table></figure>
+
+<h3 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h3><p>终端执行命令即可</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">清除缓冲</span></span><br><span class="line">npm cache clean --force</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">重新安装</span></span><br><span class="line">npm/cnpm install</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="其他方案"><a href="#其他方案" class="headerlink" title="其他方案"></a>其他方案</h3><p>另外根据网上的文章，还有以下几个解决方案：</p>
+<h4 id="1-重新安装"><a href="#1-重新安装" class="headerlink" title="1. 重新安装"></a>1. 重新安装</h4><p>将 文件夹node_modules 删除后执行 npm&#x2F;cnpm install 进行重新安装。</p>
+<h4 id="2-指定路径"><a href="#2-指定路径" class="headerlink" title="2. 指定路径"></a>2. 指定路径</h4><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">./node_modules/.bin/vue-cli-service build</span><br></pre></td></tr></table></figure>
+
+<h4 id="3-全局安装"><a href="#3-全局安装" class="headerlink" title="3. 全局安装"></a>3. 全局安装</h4><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">npm/cnpm install @vue/cli-service -g</span><br></pre></td></tr></table></figure>
+
+
+
+<p>如果是其他原因可以参考<a href="https://stackoverflow.com/questions/51172064/command-not-found-with-vue-cli">StackOverFlow</a></p>
+]]></content>
+      <tags>
+        <tag>node</tag>
+      </tags>
+  </entry>
 </search>
